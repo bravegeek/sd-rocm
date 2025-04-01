@@ -24,6 +24,8 @@ services:
       - ROCM_VERSION=${ROCM_VERSION}
       - ROOT_DIR=${ROOT_DIR}
       - COMFYUI_PORT=${COMFYUI_PORT}
+      # GPU 6700XT = 10.3.0
+      - 'HSA_OVERRIDE_GFX_VERSION=${HSA_OVERRIDE_GFX_VERSION-10.3.0}'
 
 
   stable-diffusion-webui:
@@ -51,3 +53,5 @@ services:
       - ROCM_VERSION=${ROCM_VERSION}
       - ROOT_DIR=${ROOT_DIR}
       - WEBUI_PORT=${WEBUI_PORT}
+      # GPU 6700XT = 10.3.0
+      - 'HSA_OVERRIDE_GFX_VERSION=${HSA_OVERRIDE_GFX_VERSION-10.3.0}'
